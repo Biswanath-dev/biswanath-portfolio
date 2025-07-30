@@ -2,50 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biswanath Das | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      width: 0;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink-caret {
+      50% { border-color: transparent; }
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #222;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      background: #222;
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #111;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .scroll-top:hover {
+      background: #333;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Hi, I'm Biswanath 👋</h1>
-    <p>Web Developer & IT Support Enthusiast</p>
+    <h1>Hi, I'm Biswanath Das</h1>
+    <p>Web Developer | IT Support | Networking Enthusiast</p>
   </header>
 
   <section>
     <h2>About Me</h2>
-    <p>
-      I'm a BSc-IT graduate from Mumbai University with internship experience in website customization. I love solving tech problems and building clean, simple websites.
-    </p>
-  </section>
+    <div class="card">
+      <p>I'm a BSc-IT graduate from Mumbai University (2024), passionate about web development and networking. I’ve done an internship as a Web Developer at Flymax, where I worked on user-based website customization.</p>
+    </div>
 
-  <section>
     <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript (Basic)</li>
-      <li>Java, Python, C++, PHP, SQL</li>
-      <li>Networking Fundamentals</li>
-      <li>Windows/Linux OS, MS Office</li>
-    </ul>
-  </section>
+    <div class="card">
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Java, Python, PHP, SQL</li>
+        <li>Networking Basics, MS Office, Documentation</li>
+      </ul>
+    </div>
 
-  <section>
     <h2>Projects</h2>
-    <ul>
-      <li><strong>Portfolio Website:</strong> (This site)</li>
-      <li><strong>IT Support Dashboard:</strong> Coming soon...</li>
-    </ul>
-  </section>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>A personal portfolio built using HTML, CSS, and basic animations. Hosted on GitHub.</p>
+      <a href="https://biswanath-dev.github.io/" target="_blank">View Live</a>
+    </div>
 
-  <section>
     <h2>Contact</h2>
-    <p>Email: bishu800030@gmail.com</p>
-    <p>Phone: 8097675847</p>
-    <p>GitHub: <a href="https://github.com/Biswanath-dev" target="_blank">github.com/Biswanath-dev</a></p>
+    <div class="card">
+      <p><strong>Email:</strong> bishu800030@gmail.com</p>
+      <p><strong>Mobile:</strong> 8097675847</p>
+      <p><strong>Location:</strong> Mumbai, Maharashtra</p>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Biswanath Das</p>
+    &copy; 2025 Biswanath Das | All Rights Reserved
   </footer>
+
+  <div class="scroll-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑ Top</div>
+
+  <script>
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+    });
+  </script>
 </body>
 </html>
